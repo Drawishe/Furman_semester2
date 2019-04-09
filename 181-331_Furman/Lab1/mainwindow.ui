@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>69</x>
@@ -27,9 +27,9 @@
      <item>
       <widget class="QGroupBox" name="groupBox">
        <property name="title">
-        <string>Авторизация</string>
+        <string>Авторизация преподавателя</string>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -42,28 +42,28 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
-            <widget class="QLabel" name="label">
+            <widget class="QLabel" name="Sname">
              <property name="text">
-              <string>Логин</string>
+              <string>Фамилия</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="login"/>
+            <widget class="QLineEdit" name="Snametext"/>
            </item>
           </layout>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
-            <widget class="QLabel" name="label_2">
+            <widget class="QLabel" name="Pass">
              <property name="text">
               <string>Пароль</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="password"/>
+            <widget class="QLineEdit" name="Passtext"/>
            </item>
           </layout>
          </item>
@@ -76,7 +76,7 @@
        <item row="0" column="3">
         <widget class="QPushButton" name="pushButton_2">
          <property name="text">
-          <string>Зарегистрироваться</string>
+          <string>Зарегистрироваться на курс</string>
          </property>
         </widget>
        </item>

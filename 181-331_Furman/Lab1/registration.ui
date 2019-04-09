@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>200</y>
+     <y>210</y>
      <width>131</width>
      <height>23</height>
     </rect>
@@ -29,9 +29,9 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>50</y>
-     <width>303</width>
+     <width>351</width>
      <height>119</height>
     </rect>
    </property>
@@ -39,21 +39,35 @@
     <item row="0" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="nSname">
         <property name="text">
-         <string>Логин</string>
+         <string>Фамилия</string>
         </property>
        </widget>
       </item>
      </layout>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="newLogin"/>
+     <widget class="QLineEdit" name="newSName"/>
     </item>
     <item row="1" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="nName">
+        <property name="text">
+         <string>Имя</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="newName"/>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="nMail">
         <property name="text">
          <string>Адрес электронной почты</string>
         </property>
@@ -61,36 +75,22 @@
       </item>
      </layout>
     </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="newEmail"/>
-    </item>
-    <item row="2" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Пароль</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="newPass"/>
+     <widget class="QLineEdit" name="newEmail"/>
     </item>
     <item row="3" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="nStatus">
         <property name="text">
-         <string>Подтвердите пароль</string>
+         <string>Статус(слушатель/преподаватель</string>
         </property>
        </widget>
       </item>
      </layout>
     </item>
     <item row="3" column="1">
-     <widget class="QLineEdit" name="newPass2"/>
+     <widget class="QLineEdit" name="newStatus"/>
     </item>
    </layout>
   </widget>

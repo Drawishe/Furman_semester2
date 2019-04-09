@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "registration.h"
+#include "teacher_menu.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,6 +25,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Registration *reg;
+    teacher_menu *tmenu;
 };
 
 #endif // MAINWINDOW_H

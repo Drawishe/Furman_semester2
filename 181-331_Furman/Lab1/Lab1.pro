@@ -28,23 +28,24 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     registration.cpp \
-    database.cpp \
-    listmodel.cpp
+    reg_teacher.cpp \
+    teacher_menu.cpp
 
 HEADERS += \
         mainwindow.h \
     registration.h \
-    database.h \
-    listmodel.h
+    reg_teacher.h \
+    teacher_menu.h
 
 FORMS += \
         mainwindow.ui \
-    registration.ui
+    registration.ui \
+    reg_teacher.ui \
+    teacher_menu.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-RESOURCES += \
-    qml.qrc
+RESOURCES +=

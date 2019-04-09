@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>reg_teacher</class>
+ <widget class="QDialog" name="reg_teacher">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>60</y>
+     <width>236</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="specAuth">
+      <property name="text">
+       <string>Введите специальный пароль преподавателя</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="specPass"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="accept_button">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>180</y>
+     <width>141</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Подтвердить</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

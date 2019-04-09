@@ -17,9 +17,21 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked() //Кнопка Логина при нажатии
 {
-    QString login = ui->login->text();
-    QString password = ui->password->text();
+    QString Snametext = ui->Snametext->text();
+    QString Passtext = ui->Passtext->text();
+    if(Snametext != 0 && Passtext == "1337boy")
+    {
     QMessageBox::about(this,"Окно авторизации","Вы успешно авторизированы!");
+
+    tmenu = new teacher_menu(this);
+    tmenu -> show();
+    hide();
+    }
+    else
+    {
+        QMessageBox::warning(this,"Ошибка","Проверьте введенные данные");
+    }
+
 }
 
 void MainWindow::on_pushButton_2_clicked()// Кнопка Регистрации при нажатии

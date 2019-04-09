@@ -17,6 +17,13 @@ Registration::~Registration()
 
 void Registration::on_newRegButton_clicked()// Кнопка регистрации нового аккаунта
 {
-    QMessageBox::about(this,"Регистрация завершена","Вы успешно зарегистрировались!");
     hide();
+
+    QMessageBox::about(this,"Регистрация завершена","Вы успешно зарегистрировались!");
+
+    reg_t = new reg_teacher(this);
+    reg_t -> show();
+
 }
+
+
