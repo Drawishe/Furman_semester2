@@ -28,12 +28,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     registration.cpp \
-    database.cpp
+    database.cpp \
+    listmodel.cpp
 
 HEADERS += \
         mainwindow.h \
     registration.h \
-    database.h
+    database.h \
+    listmodel.h
 
 FORMS += \
         mainwindow.ui \
@@ -43,3 +45,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    qml.qrc
