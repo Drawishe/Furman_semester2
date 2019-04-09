@@ -83,7 +83,7 @@
       <item>
        <widget class="QLabel" name="nStatus">
         <property name="text">
-         <string>Статус(слушатель/преподаватель</string>
+         <string>Статус(слушатель/преподаватель)</string>
         </property>
        </widget>
       </item>

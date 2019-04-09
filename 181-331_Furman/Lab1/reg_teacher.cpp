@@ -3,6 +3,7 @@
 #include "mainwindow.h"
 #include "registration.h"
 #include <QMessageBox>
+#include <fstream>
 
 reg_teacher::reg_teacher(QWidget *parent) :
     QDialog(parent),
