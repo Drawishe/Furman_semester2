@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include "reg_teacher.h"
+#include <QFile>
+#include <QByteArray>
 
 namespace Ui {
 class Registration;
@@ -15,11 +17,14 @@ class Registration : public QDialog
 public:
     explicit Registration(QWidget *parent = nullptr);
     ~Registration();
+    void readFile();
 
 private slots:
 
     void on_newRegButton_clicked();
 
+
+    void on_teacher_clicked();
 
 private:
     Ui::Registration *ui;

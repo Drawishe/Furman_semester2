@@ -2,6 +2,12 @@
 #include "ui_registration.h"
 #include <QMessageBox>
 #include <fstream>
+#include <QString>
+#include <iostream>
+#include <string>
+#include <QFile>
+
+using namespace std;
 
 Registration::Registration(QWidget *parent) :
     QDialog(parent),
@@ -16,40 +22,44 @@ Registration::~Registration()
 }
 
 
+
 void Registration::on_newRegButton_clicked()// Кнопка регистрации нового аккаунта
 {
     QString newName = ui->newName->text();
     QString newSName = ui->newSName->text();
     QString newEmail = ui->newEmail->text();
-    QString newStatus = ui->newStatus->text();
-    if(newEmail !=0 && newName !=0 && newSName !=0)
-    {
-        if(newStatus == "преподаватель" || newStatus == "слушатель")
-        {
-            if(newStatus == "преподаватель")
-            {
-                reg_t = new reg_teacher(this);
-                reg_t -> show();
-            }
-            if(newStatus == "слушатель")
-                {
-                    QMessageBox::about(this,"Регистрация завершена","Вы успешно зарегистрировались!");
-                }
-        hide();
-        }
+    //QString newStatus = ui->newStatus->text();
 
-        else {
+    //QString array[4] = {newName, newSName , newEmail, newStatus};
+    string newsName = newName.toStdString ();//берем логин
+    string newsSName = newSName.toStdString ();
+    string newsEmail = newEmail.toStdString();
+
+
+    /* Проверка заполнения всех полей на пропущенные поля*/
+
+    if(newEmail !="" && newName !="" && newSName !="")
+    {
+        ofstream sbase("D:/YandexDisk/Study/Qt/Furman_semester2/181-331_Furman/Lab1/stud_base.txt",ios_base::app);
+        sbase  << newsName << ":" << newsSName << ":" << newsEmail <<":stud\n";
+        sbase.close();
+        QMessageBox::about(this,"Регистрация завершена","Вы успешно зарегистрировались!");
+        hide();
+    }
+
+    else
+        {
             QMessageBox::warning(this,"Ошибка","Проверьте введённые данные!");
         }
-    }
-    else
-    {
-        QMessageBox::warning(this,"Ошибка","Проверьте введённые данные!");
 
-
-    }
 
 
 }
 
 
+void Registration::on_teacher_clicked()
+{
+    reg_t = new reg_teacher(this);
+    reg_t -> show();
+    hide();
+}
