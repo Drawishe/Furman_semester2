@@ -29,19 +29,25 @@ SOURCES += \
         mainwindow.cpp \
     registration.cpp \
     reg_teacher.cpp \
-    teacher_menu.cpp
+    teacher_menu.cpp \
+    change_pass.cpp \
+    spec_check.cpp
 
 HEADERS += \
         mainwindow.h \
     registration.h \
     reg_teacher.h \
-    teacher_menu.h
+    teacher_menu.h \
+    change_pass.h \
+    spec_check.h
 
 FORMS += \
         mainwindow.ui \
     registration.ui \
     reg_teacher.ui \
-    teacher_menu.ui
+    teacher_menu.ui \
+    change_pass.ui \
+    spec_check.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

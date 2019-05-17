@@ -2,6 +2,7 @@
 #define TEACHER_MENU_H
 
 #include <QDialog>
+#include "change_pass.h"
 
 namespace Ui {
 class teacher_menu;
@@ -19,8 +20,15 @@ private slots:
 
 
 
+    void on_next_clicked();
+
+    void on_previous_clicked();
+
+    void on_change_pass_clicked();
+
 private:
     Ui::teacher_menu *ui;
+    change_pass *chngp;
 };
 
 #endif // TEACHER_MENU_H

@@ -32,10 +32,10 @@ void reg_teacher::on_accept_button_clicked() //Кнопка регистраци
     string tSname = nameTeach.toStdString ();//берем логин
     string tspecPass = specPas.toStdString ();
 
-        if(specPas == "1337boy" && nameTeach !="")
+        if(specPas != "" && nameTeach !="")
         {
             ofstream tbase("D:/YandexDisk/Study/Qt/Furman_semester2/181-331_Furman/Lab1/teacher_base.txt",ios_base::app);
-            tbase << tSname << ":" << tspecPass <<":prep\n";
+            tbase << tSname << ":" << tspecPass <<":prep;\n";
             tbase.close();
 
             QMessageBox::about(this,"Регистрация завершена","Вы успешно зарегистрировались! "

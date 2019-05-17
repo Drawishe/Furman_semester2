@@ -1,33 +1,41 @@
-#ifndef TCPSERVER_H
+#ifndef SEVER_H
 
-#define TCPSERVER_H
+#define SEVER_H
 
-#include <QObject>
+#include <QWidget>
 
-#include <QTcpServer>
+class QTcpServer;
 
-#include <QTcpSocket>
+class QTcpSocket;
 
-class Server: public QObject{
+class QTextEdit;
+
+class Server: public QWidget{
 
     Q_OBJECT
 
+private:
+
+    QTcpServer *_tcpServer;
+
+    QTcpSocket *_clientSocket;
+
+    quint16 _nextBlockSize;
+
+    QTextEdit *_text;
+
+    void sendToClient(QTcpSocket *socket, const QString &str);
+
 public:
 
-    Server();
+    Server(quint16 port);
 
 public slots:
 
-    void newConnection();
+    virtual void slotNewConnection();
 
-    void readClient();
-
-private:
-
-    QTcpServer *_server;
-
-    QTcpSocket *_socket;
+    void slotReadClient();
 
 };
 
-#endif // TCPSERVER_H
+#endif // SEVER_H

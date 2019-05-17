@@ -28,10 +28,8 @@ void Registration::on_newRegButton_clicked()// Кнопка регистраци
     QString newName = ui->newName->text();
     QString newSName = ui->newSName->text();
     QString newEmail = ui->newEmail->text();
-    //QString newStatus = ui->newStatus->text();
 
-    //QString array[4] = {newName, newSName , newEmail, newStatus};
-    string newsName = newName.toStdString ();//берем логин
+    string newsName = newName.toStdString ();
     string newsSName = newSName.toStdString ();
     string newsEmail = newEmail.toStdString();
 
@@ -41,7 +39,7 @@ void Registration::on_newRegButton_clicked()// Кнопка регистраци
     if(newEmail !="" && newName !="" && newSName !="")
     {
         ofstream sbase("D:/YandexDisk/Study/Qt/Furman_semester2/181-331_Furman/Lab1/stud_base.txt",ios_base::app);
-        sbase  << newsName << ":" << newsSName << ":" << newsEmail <<":stud\n";
+        sbase  << newsName << ":" << newsSName << ":" << newsEmail <<":stud;\n";
         sbase.close();
         QMessageBox::about(this,"Регистрация завершена","Вы успешно зарегистрировались!");
         hide();
@@ -59,7 +57,7 @@ void Registration::on_newRegButton_clicked()// Кнопка регистраци
 
 void Registration::on_teacher_clicked()
 {
-    reg_t = new reg_teacher(this);
-    reg_t -> show();
+    sp_check = new spec_check(this);
+    sp_check -> show();
     hide();
 }

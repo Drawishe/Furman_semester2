@@ -15,6 +15,9 @@ public:
     explicit change_pass(QWidget *parent = nullptr);
     ~change_pass();
 
+private slots:
+    void on_chngpb_clicked();
+
 private:
     Ui::change_pass *ui;
 };

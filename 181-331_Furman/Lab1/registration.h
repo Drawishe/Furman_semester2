@@ -2,9 +2,9 @@
 #define REGISTRATION_H
 
 #include <QDialog>
-#include "reg_teacher.h"
 #include <QFile>
 #include <QByteArray>
+#include "spec_check.h"
 
 namespace Ui {
 class Registration;
@@ -28,7 +28,7 @@ private slots:
 
 private:
     Ui::Registration *ui;
-    reg_teacher *reg_t;
+    spec_check *sp_check;
 };
 
 #endif // REGISTRATION_H

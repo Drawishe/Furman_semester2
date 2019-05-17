@@ -4,6 +4,7 @@
 #include <QDialog>
 
 
+
 namespace Ui {
 class reg_teacher;
 }
@@ -22,6 +23,7 @@ private slots:
 
 private:
     Ui::reg_teacher *ui;
+
 
 };
 

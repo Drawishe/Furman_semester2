@@ -16,6 +16,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    teacher_menu *tmenu;
 
 private slots:
     void on_pushButton_clicked();
@@ -25,7 +26,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Registration *reg;
-    teacher_menu *tmenu;
+
 };
 
 #endif // MAINWINDOW_H
